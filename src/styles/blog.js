@@ -141,6 +141,20 @@ const useStyles = makeStyles((theme) => {
       bttContainer:{
         display: 'none'
       },
+
+      yearTitle: {
+        color: ({ DarkMode })=>{
+          if(DarkMode){
+              return "#fff"
+          }else{
+              return "#000"
+          }
+        },
+        fontSize: '1.5rem',
+        fontWeight: 'bold',
+        marginBottom: '1rem'
+      }
+      
     };
   });
 

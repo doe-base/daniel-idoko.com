@@ -85,12 +85,13 @@ export default function BlogRightBar({
 
 
   function getTop3HighestHeights(data) {
-    // Sort the array of objects based on the 'views' property in descending order
-    const sortedData = data.sort((a, b) => b.views - a.views);
+    // Create a copy of the data array to avoid mutating the original
+    const sortedData = [...data].sort((a, b) => b.views - a.views);
   
     const top3HighestHeights = sortedData.slice(0, 3);
+  
     return top3HighestHeights;
-  };
+  }
   const onNewsLetterFormSubmit =(e)=>{
       e.preventDefault();
 

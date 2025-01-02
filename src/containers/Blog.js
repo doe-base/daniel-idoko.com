@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useMemo} from "react";
 import useStyles from "../styles/blog";
 import { Button, Grid } from "@mui/material";
 import BlogCard2 from "../components/BlogCard2";
@@ -7,19 +7,26 @@ import { useGlobalContext } from "../context/AppContext"
 import Preloader from "../components/Preloader";
 
 function getTop4HighestViewBlog(data) {
-  // Sort the array of objects based on the 'views' property in descending order
-  const sortedData = data.sort((a, b) => b.views - a.views);
-  const top4HighestHeights = sortedData.slice(0, 4);
-  return top4HighestHeights;
-};
+  const sortedData = [...data].sort((a, b) => b.views - a.views);
+  const top4HighestViews = sortedData.slice(0, 4);
+  return top4HighestViews;
+}
 
 export default function BlogContainer({ DarkMode, }){
 
     const classes = useStyles({DarkMode});
-    const [topBlogs, setTopBlogs] = useState([]);
     const { setIsNavOpen, Blogs, Blogsloading } = useGlobalContext();
+    const [topBlogs, setTopBlogs] = useState(Blogs);
 
 
+    const groupedBlogs = useMemo(() => {
+      return Blogs.reduce((acc, item) => {
+        const year = item.year; // Use the year from your data
+        if (!acc[year]) acc[year] = [];
+        acc[year].push(item);
+        return acc;
+      }, {});
+    }, [Blogs]);
       
       useEffect(()=>{
         if(!Blogsloading){
@@ -61,22 +68,25 @@ export default function BlogContainer({ DarkMode, }){
                     <Preloader /> 
                   :
                     <div>
-                        <section className={classes.section}>
-                            <h2 className={classes.title}>Blogs</h2>
-
-                            {
-                                Blogs &&
-                                Blogs.map(item => {
-                                    return (
-                                        <a href={`/blog/${item._id}`} key={item._id} id="blog-card" className={classes.blogCard}>
-                                            <p id="blog-text" className={classes.blogText} style={{display: 'block'}}>{item.title}</p>
-                                            <time className={classes.dateText} style={{display: 'block'}}>{item.date.slice(0, -6)}</time>
-                                        </a>
-                                    )
-                                })
-                            }
-
-                        </section>
+                       <section className={classes.section}>
+                          <h2 className={classes.title}>Blogs</h2>
+                          {
+                            Object.keys(groupedBlogs).sort((a, b) => b - a).map(year => (
+                              <div key={year} style={{marginBottom: '2.5rem'}}>
+                                <h3 className={classes.yearTitle}>{year}</h3>
+                                {
+                                  groupedBlogs[year].map(item => (
+                                    <a href={`/blog/${item._id}`} key={item._id} id="blog-card" className={classes.blogCard}>
+                                        <p id="blog-text" className={classes.blogText} style={{display: 'block'}}>{item.title}</p>
+                                        <time className={classes.dateText} style={{display: 'block'}}>{item.date.slice(0, -6)}</time>
+                                    </a>
+                                  ))
+                                }
+                              </div>
+                            ))
+                          }
+                      </section>
+                      
 
                         <section className={classes.section}>
                             <h2 className={classes.title}>Popular Release</h2>

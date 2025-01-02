@@ -25,6 +25,9 @@ function divideArrayIntoChunks(arr, chunkSize) {
 export default function HomeContainer({ DarkMode }) {
   const classes = useStyles({DarkMode});
   const { Blogs, Blogsloading, setIsNavOpen } = useGlobalContext();
+  const [sortBlogs, setSortBlogs] = useState(Blogs)
+  console.log(sortBlogs)
+
 
   const [DiviedArrays, setDividedArrays] = useState([]);
   const [blogIndex, setBlogIndex] = useState(0);
