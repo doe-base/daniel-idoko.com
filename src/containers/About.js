@@ -25,17 +25,26 @@ export default function  AboutContainer({DarkMode}){
 
                 <div className={classes.sparatorLine}></div>
 
-                <p className={classes.theParagraph} style={{marginBottom: '3rem'}}>I'm Daniel Idoko, a passionate software developer based in Abuja, Nigeria. I've been in IT since 2021. With a background in chemistry, I discovered my true calling in programming and have dedicated myself to mastering the craft.</p>
+                <p className={classes.theParagraph} style={{marginBottom: '3rem'}}>I'm Daniel Idoko, a Solutions Architect based in Abuja, Nigeria. I've been in IT since 2021. With a background in chemistry, I discovered my true calling in programming and have dedicated myself to mastering the craft.</p>
 
                 <div className={classes.sparatorLine}></div>
 
-                <h2 className={classes.h2Title}>My Skills</h2>
+                <h2 className={classes.h2Title}>Service I Render</h2>
                 <ul className={classes.theParagraphUL} style={{paddingLeft: '5px', marginBottom: '3rem'}}>
-                    <li style={{marginBottom: '0.6rem'}}><span className={classes.importantText}>Programming Languages</span>: JavaScript, TypeScript, Golang, Python</li>
-                    <li style={{marginBottom: '0.6rem'}}><span className={classes.importantText}>Frameworks</span>: Node.js, Express, React, MUI, React Typescript, Gorilla Mux</li>
-                    <li style={{marginBottom: '0.6rem'}}><span className={classes.importantText}>Databases</span>: PostgreSQL, MongoDB, Firebase</li>
-                    <li style={{marginBottom: '0.6rem'}}><span className={classes.importantText}>DevOps</span>: Next.js, Docker</li>
-                    <li style={{marginBottom: '0.6rem'}}><span className={classes.importantText}>Additional Skills</span>: Linux (Bash), Web Security & Authentication, Computer Networking, SEO, Testing, Documentation</li>
+                    <li style={{marginBottom: '0.6rem'}}><span className={classes.importantText}>✅ Build Secure & Scalable Web Applications</span>: I develop fast, SEO-friendly, secure, full stack web applications that help businesses grow and operate efficiently. <br />
+                    
+                    <p><span className={classes.importantText}>Tech</span>: React, Next.js, Golang, Node.js, Firebase, MySQL, PostgreSQL, MongoDB</p>
+                    </li>
+
+                    <li style={{marginBottom: '0.6rem'}}><span className={classes.importantText}>✅ Optimize & Secure IT Infrastructure</span>: I design and manage business networks topologies and Infrastructures. I priorities security, reliability, and high performance. <br />
+                    
+                    <p><span className={classes.importantText}>Tech</span>: Linux, Windows, Firewalls, VPNs, Bash, Automation, Security best practices</p>
+                    </li>
+
+                    <li style={{marginBottom: '0.6rem'}}><span className={classes.importantText}>✅ Automate & Scale with Cloud Technologies</span>: I help businesses migrate to the cloud, set up CI/CD pipelines, and automate workflows for efficiency. <br />
+                    
+                    <p><span className={classes.importantText}>Tech</span>: AWS, Google Cloud, Docker, Kubernetes, Terraform, CI/CD, Python</p>
+                    </li>
                 </ul>
 
                 <div className={classes.sparatorLine}></div>

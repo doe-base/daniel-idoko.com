@@ -94,11 +94,12 @@ const useStyles = makeStyles((theme)=>{
 });
   
 
-export default function RightbarCard({ DarkMode, img, title, date, category, readduration }){
+export default function RightbarCard({ DarkMode, _id, img, title, date, category, readduration }){
     const classes = useStyles({ DarkMode, img });
 
     return (
         <>
+        <a href={`blog/${_id}`}>
             <Grid container className={classes.card}>
                 <Grid item lg={4} className={classes.cardImgHolder}>
                     <div className={classes.cardImg}></div>
@@ -112,6 +113,7 @@ export default function RightbarCard({ DarkMode, img, title, date, category, rea
                     </div>
                 </Grid>
             </Grid>
+        </a>
         </>
     )
 };
