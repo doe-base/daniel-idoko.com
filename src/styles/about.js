@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => {
       },
       test2: {
         padding: "2rem 1.5rem !important",
-        backgroundImage: "url(/img/me2.jpg)",
+        backgroundImage: "url(/img/bg11.jpg)",
         backgroundPosition: "center center",
         backgroundSize: 'cover',
         backgroundRepeat: "no-repeat",
