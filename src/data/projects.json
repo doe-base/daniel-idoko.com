@@ -6,7 +6,7 @@
     "disc": "A fun javascript game",
     "name": "Memory Game",
     "number": 1,
-    "sourcelink": "https://github.com/doe-base/memory-game",
+    "sourcelink": "/project/memory-game",
     "tech": "Javascript",
     "year": "2022"
   },
@@ -17,7 +17,7 @@
     "disc": "I build the good old netflix clone to flex my Firebase and \n\nReact skills. You might get a Phishing warning because of how good it is.",
     "name": "Netflix Clone",
     "number": 2,
-    "sourcelink": "https://github.com/doe-base/Netflix-clone",
+    "sourcelink": "/project/netflix-clone",
     "tech": "Firebase,React",
     "year": "2022"
   },
@@ -28,7 +28,7 @@
     "disc": "An interactive bank app with secure login and a modern interface, built using Next.js and Go.",
     "name": "Bank Application",
     "number": 3,
-    "sourcelink": "https://github.com/doe-base/bank-application",
+    "sourcelink": "/project/bank-application",
     "tech": "Go,Next js",
     "year": "2024"
   }

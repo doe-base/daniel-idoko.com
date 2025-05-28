@@ -28,7 +28,6 @@ export default function ContactContainer({ DarkMode }) {
           <li className={classes.li}>Have any random questions you'd like me to answer.</li>
           <li className={classes.li}>Are interested in hiring my services.</li>
         </ul>
-        <p className={classes.justText}>I will respond to your email within one hours.</p>
       </Grid>
     </Grid>
   );

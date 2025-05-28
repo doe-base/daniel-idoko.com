@@ -4,7 +4,7 @@ import HomeContainer from "../containers/Home";
 export default function Home({ DarkMode }) {
 
   useEffect(() => {
-    document.title = 'Home | Daniel Idoko | Software Developer';
+    document.title = 'Home | Daniel Idoko | Website Developer & Ethical Hacking';
   }, []);
 
   return (

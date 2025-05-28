@@ -313,7 +313,7 @@ export default function BlogRightBar({
         <section className={classes.section}>
           <h5 className={classes.title}>A little about me</h5>
           
-          <p className={classes.authorP}>Hi 👋, I'm Daniel and I've coding everyday since 2021. I enjoy collaborating on projects through platforms like GitHub. I'm also passionate about sharing my knowledge through writing articles. <a href="/about" className={classes.authorPLink}>see more</a></p>
+          <p className={classes.authorP}>Hey there 👋 I'm Daniel — a professional website developer and ethical hacker who's been building and shipping code daily since 2021. I love collaborating with other devs on GitHub and enjoy turning complex ideas into helpful articles. <a href="/about" className={classes.authorPLink}>see more</a></p>
         </section>
         {/* About section ENDS */}
         <div id="backToTop" className={classes.bttContainer}>

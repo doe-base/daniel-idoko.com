@@ -1,0 +1,67 @@
+.slider-wrapper {
+  width: 100%;
+  max-width: 500px;
+  margin: 2rem auto;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  height: 250px; /* Add this */
+}
+
+.slider-image-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+}
+
+.slider-image {
+  height: 250px;
+  width: 100%;
+  object-fit: contain; /* ✅ See full image */
+
+  border: 1px solid rgb(230, 230, 230);
+}
+
+
+/* Arrows */
+.arrow {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: rgba(0,0,0,0.5);
+  padding: 0.6rem;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow.prev {
+  left: 10px;
+}
+
+.arrow.next {
+  right: 10px;
+}
+
+.arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Theme-specific dot colors */
+.slider-wrapper.light .slick-dots li button:before {
+  color: #555;
+}
+
+.slider-wrapper.dark .slick-dots li button:before {
+  color: #bbb;
+}

@@ -8,10 +8,15 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import BlogPage from './pages/Blog';
 import ProjectPage from "./pages/Projects";
+import MemoryGameOverview from "./pages/ProjectOverview_memory-game";
+import NetflixCloneOverview from "./pages/ProjectOverview_netflix-clone";
+import BankApplicationOverview from "./pages/ProjectOverview_bank-application";
 import hljs from 'highlight.js';
 import Page404 from "./pages/Page404";
 import { useGlobalContext } from "./context/AppContext";
 import "./css/dracula.css";
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 
 const theme = createTheme({
@@ -72,6 +77,12 @@ function App() {
             <Route path="/projects" element={<ProjectPage DarkMode={DarkMode} />}/>
             <Route path="/about" element={<About DarkMode={DarkMode}/>} />
             <Route path="/reach-out" element={<Contact DarkMode={DarkMode}/>} />
+
+            <Route path="/project/memory-game" element={<MemoryGameOverview DarkMode={DarkMode}/>} />
+            <Route path="/project/netflix-clone" element={<NetflixCloneOverview DarkMode={DarkMode}/>} />
+            <Route path="/project/bank-application" element={<BankApplicationOverview DarkMode={DarkMode}/>} />
+
+
             <Route path="*" element={<Page404 DarkMode={DarkMode}/>} />
           </Routes>
         </Layout>

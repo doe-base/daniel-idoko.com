@@ -5,7 +5,7 @@ import ProjectContainer from "../containers/Project";
 export default function ProjectPage({DarkMode}){
 
   useEffect(() => {
-    document.title = 'Projects | Daniel Idoko | Software Developer';
+    document.title = 'Projects | Daniel Idoko | Website Developer & Ethical Hacking';
   }, []);
 
     return(

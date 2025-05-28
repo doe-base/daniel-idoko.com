@@ -16,25 +16,23 @@ const useStyles = makeStyles((theme)=>{
                 marginBottom: "3rem !important",
             },
         },
-        cardImg: {
+        cardImg: ({ img }) => ({
             display: "block",
             height: "150px",
             width: "150px",
             borderRadius: "50%",
             backgroundPosition: "center",
             backgroundSize: "cover",
+            backgroundImage: `url(${img})`,
 
-            backgroundImage: ({img})=>{
-                return `url(${img})`
+            [theme.breakpoints.down("lg")]: {
+              marginBottom: "1rem",
+              borderRadius: "10px",
             },
-  
-            [theme.breakpoints.down('lg')]: {
-                marginBottom: '1rem'
+            [theme.breakpoints.down("sm")]: {
+                width: '100%'
             },
-            [theme.breakpoints.down('sm')]: {
-                display: 'none'
-            },
-        },
+        }),
         cardTitle: {
             fontFamily: "Lora, Arial, serif",
             fontWeight: "400",
@@ -72,9 +70,13 @@ const useStyles = makeStyles((theme)=>{
         cardTextarea: {
             textAlign: "left",
             paddingLeft: "1.5rem",
+
+            [theme.breakpoints.down("lg")]: {
+              paddingLeft: "0rem",
+            },
             
             [theme.breakpoints.down('sm')]: {
-                paddingLeft: "0rem",
+                
             }
         },
         cardInfo: {
@@ -128,11 +130,11 @@ export default function Blogcard({_id, DarkMode, img, title, smallbody, readdura
     return (
         <Grid item xs={12} className={classes.card}>
             <Grid container>
-                <Grid item lg={3}>
+                <Grid item xs={12} lg={3}>
                     <div className={classes.cardImg}></div>
                 </Grid>
 
-                <Grid item lg={9} className={classes.cardTextarea}>
+                <Grid item xs={12} lg={9} className={classes.cardTextarea}>
                     <a href={`blog/${_id}`}><h1 className={classes.cardTitle}>{title}</h1></a>
                     <div className={classes.cardInfoHolder}>
                         <div className={classes.cardInfo}><CalendarMonthIcon className={classes.cardInfoIcon}/> <p className={classes.cardInfoText}>{date}</p></div>

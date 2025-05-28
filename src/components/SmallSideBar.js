@@ -148,7 +148,7 @@ const SmallSidebar = ({ toggleMode }) => {
           </div>
 
           {/* <div className={classes.aboutMeText}>
-              <p className={classes.bioText}>Hey, I'm <a href="/about" className="namelogoLink" style={{backgroundImage: "url(/img/bg11.jpg"}}>Daniel Idoko</a>. <br/> I'm a Software Developer in Abuja Nigeria. Welcome to my website where I post blogs about topic that intrest me and share source code to my project. </p>
+              <p className={classes.bioText}>Hey, I'm <a href="/about" className="namelogoLink" style={{backgroundImage: "url(/img/bg11.jpg"}}>Daniel Idoko</a>. <br/> I'm a Website Developer & Ethical Hacking in Abuja Nigeria. Welcome to my website where I post blogs about topic that intrest me and share source code to my project. </p>
           </div> */}
 
           <div className={classes.btnsHolder}>

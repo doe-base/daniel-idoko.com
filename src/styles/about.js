@@ -19,19 +19,19 @@ const useStyles = makeStyles((theme) => {
       },
       test2: {
         padding: "2rem 1.5rem !important",
-        backgroundImage: "url(/img/bg11.jpg)",
+        backgroundImage: "url(/img/me1.jpg)",
         backgroundPosition: "center center",
         backgroundSize: 'cover',
         backgroundRepeat: "no-repeat",
     
         [theme.breakpoints.down('md')]: {
           height: "20rem !important",
-          backgroundPosition: "center 20%",
+          backgroundPosition: "center 40%",
         },
         [theme.breakpoints.down('sm')]: {
           padding: "1rem 1rem !important",
           height: "10rem !important",
-          backgroundPosition: "center 20%",
+          backgroundPosition: "center 40%",
 
         }
       },
@@ -142,6 +142,7 @@ const useStyles = makeStyles((theme) => {
       h1Title: {
         fontSize: '2rem',
         marginBottom: '1.4rem',
+        fontWeight: '600 !important',
         color: ({DarkMode})=>{
           if(DarkMode){
             return '#fff'
@@ -177,7 +178,16 @@ const useStyles = makeStyles((theme) => {
             return "#000"
           }
         }
-      }
+      },
+      serviceCard: {
+        backgroundColor: ({DarkMode})=>{
+          if(DarkMode){
+            return 'rgb(24, 24, 24) !important'
+          }else{
+            return "#fff !important"
+          }
+        }
+      },
     };
   });
 

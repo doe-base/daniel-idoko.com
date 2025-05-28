@@ -187,7 +187,7 @@ export default function Sidebar({ DarkMode, toggleMode }){
                     <a href="#" className="namelogoLink" style={{backgroundImage: "url(/img/bg11.jpg"}}>Bahd <br /> Since <span>'O2</span></a>
                 </div> */}
                 <div>
-                    <p className={classes.bioText}>Hey, I'm <a href="/about" className="namelogoLink" style={{backgroundImage: "url(/img/bg11.jpg"}}>Daniel Idoko</a>. <br/> I'm a Software Developer based in Abuja, Nigeria. Welcome to my website, where I post blogs about topics that interest me and share the source code for my projects. </p>
+                    <p className={classes.bioText}>Hey, I'm <a href="/about" className="namelogoLink" style={{backgroundImage: "url(/img/bg11.jpg"}}>Daniel Idoko</a>. <br/> I'm a Website Developer & Ethical Hacking based in Abuja, Nigeria. Welcome to my website, where I post blogs about topics that interest me and share the source code for my projects. </p>
                 </div>
 
                 <form onSubmit={onNewsLetterFormSubmit}>

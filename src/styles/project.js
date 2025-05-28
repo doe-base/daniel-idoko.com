@@ -229,7 +229,22 @@ const useStyles = makeStyles((theme) => {
       bttContainer:{
         display: 'none'
       },
+      specialResponsiveCenter:{
+        [theme.breakpoints.down('sm')]: {
+            justifyContent: 'center'
+        },
+      },
+      codeBlock: {
+        backgroundColor: ({ DarkMode }) => DarkMode ? '#1e1e1e' : '#f5f5f5',
+        color: ({ DarkMode }) => DarkMode ? '#eee' : '#333',
+        padding: '2px 6px',
+        borderRadius: '4px',
+        fontSize: '0.9rem',
+        fontFamily: 'Source Code Pro, monospace',
+        border: ({ DarkMode }) => `1px solid ${DarkMode ? '#444' : '#ccc'}`,
+        whiteSpace: 'nowrap',
+      },
+
     };
   });
-
   export default useStyles;

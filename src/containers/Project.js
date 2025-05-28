@@ -117,7 +117,7 @@ export default function ProjectContainer({DarkMode}){
                                                     <p className={classes.dateText}>{item.disc}</p>
                                                     <div className={classes.cardLinks}>
                                                         {item.demolink ? <a href={item.demolink} className={classes.links} target="_blank"><span style={{whiteSpace: 'nowrap'}}>View live</span><BiLinkExternal /></a> : null}
-                                                        {item.sourcelink ? <a href={item.sourcelink} className={classes.links} target="_blank"><span style={{whiteSpace: 'nowrap'}}>Source code</span><FaGithubAlt /></a> : null}
+                                                        {item.sourcelink ? <a href={item.sourcelink} className={classes.links}><span style={{whiteSpace: 'nowrap'}}>Project Overview</span></a> : null}
                                                         
                                                     </div>
                                                 </div>
