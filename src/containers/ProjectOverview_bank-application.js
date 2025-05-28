@@ -29,12 +29,13 @@ export default function BankApplicationOverviewContainer({DarkMode}){
     const classes = useStyles({DarkMode});
 
     const images = [
-      '/img/netflix-clone/netflix-clone-1.png',
-      '/img/netflix-clone/netflix-clone-2.png',
-      '/img/netflix-clone/netflix-clone-3.png',
-      '/img/netflix-clone/netflix-clone-4.png',
-      '/img/netflix-clone/netflix-clone-5.png',
-      '/img/netflix-clone/netflix-clone-6.png'
+      '/img/bank-application/bank-application-1.png',
+      '/img/bank-application/bank-application-2.png',
+      '/img/bank-application/bank-application-3.png',
+      '/img/bank-application/bank-application-4.png',
+      '/img/bank-application/bank-application-5.png',
+      '/img/bank-application/bank-application-6.png',
+      '/img/bank-application/bank-application-7.png',
     ];
 
     return(
@@ -67,7 +68,7 @@ export default function BankApplicationOverviewContainer({DarkMode}){
         </Typography>
 
         <Typography variant="body1" sx={{ mb: 3, color: isDark ? '#aaa' : 'text.secondary' }}>
-          To experience the bank dashboard in the demo, simply click the <a href="#" style={{color: 'rgb(30, 175, 237)'}}>Demo</a> button and use
+          To experience the bank dashboard in the demo, simply click the <a href="https://bank-application-website.vercel.app" target="_blank" style={{color: 'rgb(30, 175, 237)'}}>Demo</a> button and use
           <code className={classes.codeBlock}> 123456789 </code> as the login ID. This grants you access to core features like viewing account balance,
           transaction history, and more.
         </Typography>

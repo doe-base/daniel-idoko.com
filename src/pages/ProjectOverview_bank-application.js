@@ -46,6 +46,23 @@ export default function BankApplicationOverview({DarkMode}){
                   View Code
                 </Button>
               </Grid>
+              <Grid item>
+                <Button
+                  variant="outlined"
+                  href="https://bank-application-website.vercel.app"
+                  target="_blank"
+                  rel="noopener"
+                  sx={{
+                    color: DarkMode ? '#90caf9' : 'primary.main',
+                    borderColor: DarkMode ? '#90caf9' : 'primary.main',
+                    '&:hover': {
+                      borderColor: DarkMode ? '#64b5f6' : 'primary.dark',
+                    },
+                  }}
+                >
+                  Live Demo
+                </Button>
+              </Grid>
             </Grid>
       </Box>
     )
