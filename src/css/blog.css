@@ -265,3 +265,8 @@ a{
   .bold{
     font-weight: bold;
   }
+
+
+ul, ol{
+  margin-left: 1rem;
+}

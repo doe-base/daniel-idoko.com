@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme)=>{
             width: "100%",
             marginBottom: "5rem !important",
             [theme.breakpoints.down('sm')]: {
-                marginBottom: "3rem !important",
+                marginBottom: "6rem !important",
             },
         },
         cardImg: ({ img }) => ({
@@ -128,23 +128,26 @@ export default function Blogcard({_id, DarkMode, img, title, smallbody, readdura
     
   
     return (
-        <Grid item xs={12} className={classes.card}>
-            <Grid container>
-                <Grid item xs={12} lg={3}>
-                    <div className={classes.cardImg}></div>
-                </Grid>
 
-                <Grid item xs={12} lg={9} className={classes.cardTextarea}>
-                    <a href={`blog/${_id}`}><h1 className={classes.cardTitle}>{title}</h1></a>
-                    <div className={classes.cardInfoHolder}>
-                        <div className={classes.cardInfo}><CalendarMonthIcon className={classes.cardInfoIcon}/> <p className={classes.cardInfoText}>{date}</p></div>
-                        <div className={classes.cardInfo}><FolderOutlinedIcon className={classes.cardInfoIcon}/> <p className={classes.cardInfoTextJavascipt}>{category}</p></div>
-                        <div className={classes.cardInfo}><TimerOutlinedIcon className={classes.cardInfoIcon}/> <p className={classes.cardInfoText}>{readduration} <span className={classes.minRead}>min read</span></p></div>
-                    </div>
-                    <p className={classes.cardP}>{smallbody}</p>
-                    <a href={`blog/${_id}`} className={classes.cardLink}><p>Read More</p> <ChevronRightOutlinedIcon /></a>
+        <Grid item xs={12} className={classes.card}>
+            <a href={`blog/${_id}`}>    
+                <Grid container>
+                    <Grid item xs={12} lg={3}>
+                        <div className={classes.cardImg}></div>
+                    </Grid>
+
+                    <Grid item xs={12} lg={9} className={classes.cardTextarea}>
+                        <h1 className={classes.cardTitle}>{title}</h1>
+                        <div className={classes.cardInfoHolder}>
+                            <div className={classes.cardInfo}><CalendarMonthIcon className={classes.cardInfoIcon}/> <p className={classes.cardInfoText}>{date}</p></div>
+                            <div className={classes.cardInfo}><FolderOutlinedIcon className={classes.cardInfoIcon}/> <p className={classes.cardInfoTextJavascipt}>{category}</p></div>
+                            <div className={classes.cardInfo}><TimerOutlinedIcon className={classes.cardInfoIcon}/> <p className={classes.cardInfoText}>{readduration} <span className={classes.minRead}>min read</span></p></div>
+                        </div>
+                        <p className={classes.cardP}>{smallbody}</p>
+                        <a href={`blog/${_id}`} className={classes.cardLink}><p>Read More</p> <ChevronRightOutlinedIcon /></a>
+                    </Grid>
                 </Grid>
-            </Grid>
+            </a>
         </Grid>
     )
 };

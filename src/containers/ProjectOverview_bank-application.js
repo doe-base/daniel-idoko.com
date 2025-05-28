@@ -69,7 +69,7 @@ export default function BankApplicationOverviewContainer({DarkMode}){
 
         <Typography variant="body1" sx={{ mb: 3, color: isDark ? '#aaa' : 'text.secondary' }}>
           To experience the bank dashboard in the demo, simply click the <a href="https://bank-application-website.vercel.app" target="_blank" style={{color: 'rgb(30, 175, 237)'}}>Demo</a> button and use
-          <code className={classes.codeBlock}> 123456789 </code> as the login ID. This grants you access to core features like viewing account balance,
+           <code className={classes.codeBlock}>123456789</code>  as the login ID. This grants you access to core features like viewing account balance,
           transaction history, and more.
         </Typography>
 
@@ -120,55 +120,55 @@ export default function BankApplicationOverviewContainer({DarkMode}){
           }}
         >
         {`
-          .
-            ├── bank-app/                # Main user-facing banking dashboard (Next.js)
-            │   ├── app/                 # App logic, routes, and UI components
-            │   │   ├── auth/            # Auth-related routes and pages
-            │   │   ├── components/      # Reusable UI components
-            │   │   ├── constants/       # Constant values used across the app
-            │   │   ├── containers/      # UI containers for layout and structure
-            │   │   ├── context/         # React contexts (e.g., auth, theme)
-            │   │   ├── css/             # CSS modules
-            │   │   ├── data/            # Static data or mock datasets
-            │   │   ├── elite-bank-app/  # Core banking app pages/features
-            │   │   ├── styles/          # Additional styling files
-            │   │   └── theme/           # Theming logic
-            │   ├── public/imgs/         # Static image assets
-            │   ├── globals.css          # Global styles
-            │   ├── layout.tsx           # Shared layout component
-            │   ├── page.tsx             # Root page
-            │   └── ...                  # Config files (next.config, tsconfig, etc.)
+.
+  ├── bank-app/                # Main user-facing banking dashboard (Next.js)
+  │   ├── app/                 # App logic, routes, and UI components
+  │   │   ├── auth/            # Auth-related routes and pages
+  │   │   ├── components/      # Reusable UI components
+  │   │   ├── constants/       # Constant values used across the app
+  │   │   ├── containers/      # UI containers for layout and structure
+  │   │   ├── context/         # React contexts (e.g., auth, theme)
+  │   │   ├── css/             # CSS modules
+  │   │   ├── data/            # Static data or mock datasets
+  │   │   ├── elite-bank-app/  # Core banking app pages/features
+  │   │   ├── styles/          # Additional styling files
+  │   │   └── theme/           # Theming logic
+  │   ├── public/imgs/         # Static image assets
+  │   ├── globals.css          # Global styles
+  │   ├── layout.tsx           # Shared layout component
+  │   ├── page.tsx             # Root page
+  │   └── ...                  # Config files (next.config, tsconfig, etc.)
 
-            ├── server/                  # Backend API (Golang)
-            │   ├── cmd/main.go          # Server entry point
-            │   ├── pkgs/                # Modular backend logic
-            │   │   ├── auth/            # Authentication handlers
-            │   │   ├── config/          # Environment configs and constants
-            │   │   ├── gets/            # GET route handlers
-            │   │   ├── middleware/      # HTTP middlewares
-            │   │   ├── registration/    # Signup/registration logic
-            │   │   └── utils/           # Helper functions
-            │   ├── postgres_queries/    # SQL schema and seed data
-            │   ├── queries/             # SQL query files (Go integrated)
-            │   ├── go.mod, go.sum       # Go modules
-            │   └── sql_table_map.md     # Documentation for DB table structure
+  ├── server/                  # Backend API (Golang)
+  │   ├── cmd/main.go          # Server entry point
+  │   ├── pkgs/                # Modular backend logic
+  │   │   ├── auth/            # Authentication handlers
+  │   │   ├── config/          # Environment configs and constants
+  │   │   ├── gets/            # GET route handlers
+  │   │   ├── middleware/      # HTTP middlewares
+  │   │   ├── registration/    # Signup/registration logic
+  │   │   └── utils/           # Helper functions
+  │   ├── postgres_queries/    # SQL schema and seed data
+  │   ├── queries/             # SQL query files (Go integrated)
+  │   ├── go.mod, go.sum       # Go modules
+  │   └── sql_table_map.md     # Documentation for DB table structure
 
-            ├── website/                 # Project landing site and login UI (Next.js)
-            │   ├── app/                 # Page and layout components
-            │   │   ├── components/
-            │   │   ├── constants/
-            │   │   ├── containers/
-            │   │   ├── css/
-            │   │   ├── ecw/             # (Assumed custom feature set)
-            │   │   ├── styles/
-            │   │   └── theme/
-            │   ├── public/              # Static assets like images and icons
-            │   ├── globals.css          # Global styling
-            │   ├── layout.tsx, page.tsx # Root layout and page
-            │   └── ...                  # Next.js config and typings
+  ├── website/                 # Project landing site and login UI (Next.js)
+  │   ├── app/                 # Page and layout components
+  │   │   ├── components/
+  │   │   ├── constants/
+  │   │   ├── containers/
+  │   │   ├── css/
+  │   │   ├── ecw/             # (Assumed custom feature set)
+  │   │   ├── styles/
+  │   │   └── theme/
+  │   ├── public/              # Static assets like images and icons
+  │   ├── globals.css          # Global styling
+  │   ├── layout.tsx, page.tsx # Root layout and page
+  │   └── ...                  # Next.js config and typings
 
-            ├── README.md                # Project root documentation
-            ├── todos.txt                # Task list or notes
+  ├── README.md                # Project root documentation
+  ├── todos.txt                # Task list or notes
         `}
         </Box>
 
