@@ -181,10 +181,10 @@ export default function BankApplicationOverviewContainer({DarkMode}){
           Follow these steps to set up and run the project on your local machine. The application consists of three major parts: the backend server, the PostgreSQL database, and two frontend apps. Each part is located in a dedicated folder and must be set up individually.
         </Typography>
 
-        <Box component="ol" sx={{ pl: 3, color: isDark ? '#aaa' : '#555', mb: 4 }}>
+        <Box component="ol" sx={{ pl: 0, color: isDark ? '#aaa' : '#555', mb: 4 }}>
           <li style={{marginBottom: '2rem'}}>
             <Typography variant="subtitle1" fontWeight="bold" fontSize="1.2rem">Backend (Golang Server)</Typography>
-            <Typography component="div" sx={{ ml: 2, mt: 1 }}>
+            <Typography component="div">
               <ul>
                 <li>Navigate to the <code className={classes.codeBlock}>/server</code> directory.</li>
                 <li> Create a <strong><code className={classes.codeBlock}>.env</code></strong> file in the <code className={classes.codeBlock}>/server</code> directory with the following content:</li>
