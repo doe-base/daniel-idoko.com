@@ -13,27 +13,27 @@ export default function  AboutContainer({DarkMode}){
     const backgroundColor = `${DarkMode ? "rgba(248, 249, 250, 0.2)" : "rgb(248, 249, 250)"}`;
 
 
-    const services = [
-        {
-          icon: <Code fontSize="large" color="primary" />,
-          title: "Website Development",
-          desc: "I design and build fast, responsive, and accessible websites and web apps using React, Next.js, and Node.js.",
-        },
-        {
-          icon: <Security fontSize="large" color="primary" />,
-          title: "Ethical Hacking",
-          desc: "I conduct vulnerability assessments and penetration testing to help businesses strengthen their digital security.",
-        },
-        {
-          icon: <Build fontSize="large" color="primary" />,
-          title: "Backend Development",
-          desc: "I develop secure and scalable backend systems using Golang, Node.js, and Firebase for robust application performance.",
-        },
-        {
-          icon: <Devices fontSize="large" color="primary" />,
-          title: "Tech Mentorship",
-          desc: "I guide beginners and junior developers by offering tutorials, code reviews, and advice to grow in the tech space.",
-        },
+    const services =[
+      {
+        icon: <Code fontSize="large" color="primary" />,
+        title: "Website Development",
+        desc: "I design and build fast, responsive, and accessible websites and web apps using React, Next.js, and Node.js.",
+      },
+      {
+        icon: <Security fontSize="large" color="primary" />,
+        title: "Ethical Hacking",
+        desc: "I conduct vulnerability assessments and penetration testing to help businesses strengthen their digital security.",
+      },
+      {
+        icon: <Build fontSize="large" color="primary" />,
+        title: "Backend Development",
+        desc: "I develop secure and scalable backend systems using Golang, Node.js, and Firebase for robust application performance.",
+      },
+      {
+        icon: <Devices fontSize="large" color="primary" />,
+        title: "Network Administrator",
+        desc: "I set up, manage, and secure computer networks to ensure smooth operations and reliable connectivity across systems.",
+      },
     ];
 
     return(
