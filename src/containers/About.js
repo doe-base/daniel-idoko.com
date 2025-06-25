@@ -51,7 +51,13 @@ export default function  AboutContainer({DarkMode}){
 
                 <div className={classes.sparatorLine}></div>
 
-                <p className={classes.theParagraph} style={{marginBottom: '3rem'}}>I'm Daniel Idoko, a Website Developer and Ethical Hacker based in Abuja, Nigeria. I've been working in IT since 2021. With a background in chemistry, I discovered my true passion in programming and have since dedicated myself to mastering the craft.</p>
+                  <p className={classes.theParagraph} style={{marginBottom: '3rem'}}>I'm Daniel Idoko, a Website Developer and Ethical Hacker based in Abuja, Nigeria. I've been working in IT since 2021. <br/><br/>
+
+                    -I help businesses get secure websites up and running fast<br/>
+                    -I audit and secure businesses infrastructure against cyber threats<br/>
+                    -Tech Training for Business Owners & Staff<br/>
+                    -I’m a one-man tech solution for SMEs
+                  </p>
 
                 <div className={classes.sparatorLine}></div>
 

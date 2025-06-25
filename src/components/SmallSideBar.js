@@ -57,7 +57,7 @@ const useStyles = makeStyles((theme)=>{
           display: 'grid',
           gridTemplateColumns: '1fr 1fr',
           gridGap: '1rem',
-          marginBottom: '4rem',
+          marginBottom: '1rem',
           marginTop: '1rem',
 
           [theme.breakpoints.up('sm')]:{
@@ -71,7 +71,8 @@ const useStyles = makeStyles((theme)=>{
           width: '100%',
           display: 'flex',
           justifyContent: 'space-evenly',
-          alignItems: 'center'
+          alignItems: 'center',
+          marginBottom: '3rem'
         },
         link: {
           color: ({ DarkMode })=>{
@@ -146,18 +147,21 @@ const SmallSidebar = ({ toggleMode }) => {
             <a href='/about' className={classes.link} style={currentPath == "/about" ? {color: 'rgb(30, 175, 237)'} : null}>About me</a>
             <a href='/reach-out' className={classes.link} style={currentPath == "/reach-out" ? {color: 'rgb(30, 175, 237)'} : null}>Reach out</a>
           </div>
+          <div className={classes.btnsHolder}>
+            <Button variant="contained" onClick={toGithub}>Github <FaGithubAlt style={{paddingLeft: '3px'}}/></Button>
+            {/* <Button variant="outlined">Download CV</Button> */}
+          </div>
 
           {/* <div className={classes.aboutMeText}>
               <p className={classes.bioText}>Hey, I'm <a href="/about" className="namelogoLink" style={{backgroundImage: "url(/img/bg11.jpg"}}>Daniel Idoko</a>. <br/> I'm a Website Developer & Ethical Hacking in Abuja Nigeria. Welcome to my website where I post blogs about topic that intrest me and share source code to my project. </p>
           </div> */}
 
-          <div className={classes.btnsHolder}>
-            <Button variant="contained" onClick={toGithub}>Github <FaGithubAlt style={{paddingLeft: '3px'}}/></Button>
-            {/* <Button variant="outlined">Download CV</Button> */}
-          </div>
+
         </section>
 
         <div>
+          <p className={classes.bioText}><span style={{fontWeight: "bold"}}>Hey, I'm <a href="/about" className="namelogoLink" style={{backgroundImage: "url(/img/bg11.jpg"}}>Daniel Idoko</a>, a Web Developer & Ethical Hacker based in Abuja, Nigeria.</span></p>
+        
           <p className={classes.copyRight}>&copy; 2023 Daniel Idoko. All Rights Reserved.</p>
         </div>
         
