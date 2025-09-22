@@ -27,13 +27,15 @@ const useStyles = makeStyles((theme) => {
         [theme.breakpoints.down('md')]: {
           height: "20rem !important",
           backgroundPosition: "center 15%",
-          borderRadius: '0.8rem'
+          borderBottomLeftRadius: '0.8rem',
+          borderBottomRightRadius: '0.8rem'
         },
         [theme.breakpoints.down('sm')]: {
           height: "15rem !important",
           backgroundPosition: "center 15%",
           padding: "1rem 1rem !important",
-          borderRadius: '0.8rem'
+          borderBottomRightRadius: '0.8rem',
+          borderBottomLeftRadius: '0.8rem'
         }
       },
       label: {
