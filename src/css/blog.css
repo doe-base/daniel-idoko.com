@@ -28,6 +28,7 @@ a{
   font-size: 1.5rem;
   margin-bottom: 1rem;
   font-weight: 600;
+  font-family: "Questrial", sans-serif;
 }
 .topic {
     font-size: 1.8rem;
@@ -64,6 +65,7 @@ a{
     color: #5a5a5a;
   }
   .quote-paragraph {
+    font-family: "Questrial", sans-serif;
     font-size: 1rem;
     font-weight: 500;
     letter-spacing: 0.8px;
@@ -186,10 +188,12 @@ a{
   }
   
   .img {
-    width: 100%;
+    max-width: 100%;
+    height: 100%;
     cursor: zoom-in;
-    margin-bottom: 1rem;
     border: 1.5px solid #5a5a5a;
+    display: block;
+    margin: 0 auto;
   }
 
   .important-sentence {
@@ -230,6 +234,9 @@ a{
   .th, .td{
     padding: 0.3rem;
   }
+  .th{
+    font-weight: 900;
+  }
 
 
   @media (max-width: 600px) {
@@ -266,7 +273,11 @@ a{
     font-weight: bold;
   }
 
-
 ul, ol{
   margin-left: 1rem;
+}
+
+
+.img-box {
+
 }

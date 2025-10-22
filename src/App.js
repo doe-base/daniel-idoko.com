@@ -19,6 +19,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 
+
 const theme = createTheme({
   breakpoints: {
     values: {
@@ -60,6 +61,7 @@ function App() {
   useEffect(()=>{
     hljs.highlightAll();
   }, [DarkMode]);
+ 
 
   useEffect(()=>{
     document.getElementsByTagName('body')[0].style.background = `${DarkMode ? '#181818' : '#fff'}`;

@@ -12,6 +12,9 @@ import axios from "axios";
 import "../css/blog.css";
 import hljs from 'highlight.js';
 import { Watch } from "react-loader-spinner";
+import GLightbox from 'glightbox';
+import 'glightbox/dist/css/glightbox.min.css';
+
 
 
 export default function SingleBlogContainer({ item, DarkMode }) {
@@ -44,6 +47,18 @@ export default function SingleBlogContainer({ item, DarkMode }) {
     useEffect(()=>{
       hljs.highlightAll();
     }, [DarkMode, item, pageLoading]);
+    useEffect(() => {
+      // Initialize Glightbox after HTML mounts
+      const lightbox = GLightbox({
+        selector: '.glightbox', // Match your image links
+        touchNavigation: true,
+        loop: true,
+      });
+
+      return () => {
+        lightbox.destroy(); // Clean up on unmount
+      };
+    }, [DarkMode, item, pageLoading]); // Re-init if HTML changes
 
     useEffect(()=>{
       const topicEl = document.querySelectorAll('.topic');
