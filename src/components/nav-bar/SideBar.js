@@ -133,6 +133,7 @@ const useStyles = makeStyles((theme)=>{
 });
 
 export default function Sidebar({ DarkMode, toggleMode }){
+    const mainWebsiteURL = process.env.REACT_APP_MEETDANIELIDOKO_URL;
 
     const classes = useStyles({ DarkMode });
     const currentYear = new Date().getFullYear();
@@ -186,14 +187,11 @@ export default function Sidebar({ DarkMode, toggleMode }){
                 {/* <div className={classes.nameLogo}>
                     <a href="#" className="namelogoLink" style={{backgroundImage: "url(/img/bg11.jpg"}}>Bahd <br /> Since <span>'O2</span></a>
                 </div> */}
-                <div>
-                   {/* <p className={classes.bioText}>Hey, I'm <a href="/about" className="namelogoLink" style={{backgroundImage: "url(/img/bg11.jpg"}}>Daniel Idoko</a>. <br/> I'm a Website Developer & Ethical Hacking based in Abuja, Nigeria. Welcome to my website, where I post blogs about topics that interest me and share the source code for my projects. </p> */}
-
+                {/* <div>
                     <p className={classes.bioText}><span style={{fontWeight: "bold"}}>Hey, I'm <a href="/about" className="namelogoLink" style={{backgroundImage: "url(/img/bg11.jpg"}}>Daniel Idoko</a>, a Web Developer & Ethical Hacker based in Abuja, Nigeria.</span></p>
+                </div> */}
 
-                </div>
-
-                <form onSubmit={onNewsLetterFormSubmit}>
+                {/* <form onSubmit={onNewsLetterFormSubmit}>
                     <label htmlFor="email" className={classes.label}>Subscribe for newsletter</label>
                     <div className={classes.inputHolder}>
                         <input type="email" name="email" placeholder="Enter Your Email" className={classes.input} value={email} onChange={(e)=> setEmail(e.currentTarget.value)}/>
@@ -219,9 +217,15 @@ export default function Sidebar({ DarkMode, toggleMode }){
                                 <p style={{color: '#FFA500'}}>{message}</p>
                         }
                     </div>
-                </form>
+                </form> */}
 
                 {/* <p className={classes.copyright}>Copyright {currentYear} All rights reserved | This template was made by IDG</p> */}
+                <p className={classes.bioText}>
+                    {/* Hello! I'm <a href="/about" className="namelogoLink" style={{backgroundImage: "url(/img/bg11.jpg)"}}>Daniel Idoko</a>,   */}
+                    Hey there, I use this website to share code, blogs, and details about my projects.
+                    <br/>  
+                    To learn more about me and the services I render, please visit my main site: <a href={`https://${mainWebsiteURL}`} target="_blank" rel="noopener noreferrer" style={{color: "rgb(30, 175, 237)"}}>{mainWebsiteURL}</a>.
+                </p>
             </div>
 
         </aside>

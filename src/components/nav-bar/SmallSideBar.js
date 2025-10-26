@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FaTimes } from 'react-icons/fa';
-import { useGlobalContext } from '../context/AppContext';
+import { useGlobalContext } from '../../context/AppContext';
 import TipsAndUpdatesIcon from '@mui/icons-material/TipsAndUpdates';
 import { makeStyles } from '@mui/styles';
 import { Button } from '@mui/material';
@@ -8,6 +8,7 @@ import { FaGithubAlt } from 'react-icons/fa';
 
 
 const useStyles = makeStyles((theme)=>{
+
     return {
 
         sidebar: {
@@ -116,6 +117,7 @@ const useStyles = makeStyles((theme)=>{
 
 
 const SmallSidebar = ({ toggleMode }) => {
+    const mainWebsiteURL = process.env.REACT_APP_MEETDANIELIDOKO_URL;
 
     const { Blogs, DarkMode, setDarkMode, isNavOpen, setIsNavOpen } = useGlobalContext();
     const classes = useStyles({ DarkMode });
@@ -141,16 +143,18 @@ const SmallSidebar = ({ toggleMode }) => {
           </button>
 
           <div className={classes.sidebarLinks}>
-            <a  href='/' className={classes.link} style={currentPath == "/" ? {color: 'rgb(30, 175, 237)'} : null}>Home</a>
+            <a  href='/' className={classes.link} style={currentPath == "/" ? {color: 'rgb(30, 175, 237)'} : null}>Dev Notes</a>
             <a href='/learn' className={classes.link} style={currentPath == "/learn" ? {color: 'rgb(30, 175, 237)'} : null}>Blogs</a>
             <a href='/projects' className={classes.link} style={currentPath == "/projects" ? {color: 'rgb(30, 175, 237)'} : null}>Projects</a>
-            <a href='/about' className={classes.link} style={currentPath == "/about" ? {color: 'rgb(30, 175, 237)'} : null}>About me</a>
+            {/* <a href='/about' className={classes.link} style={currentPath == "/about" ? {color: 'rgb(30, 175, 237)'} : null}>About me</a> */}
             <a href='/reach-out' className={classes.link} style={currentPath == "/reach-out" ? {color: 'rgb(30, 175, 237)'} : null}>Reach out</a>
+            <Button variant="text" style={{color: 'rgb(255, 85, 51)', fontWeight: "700", padding: '0', textAlign: "left", width: "0"}} onClick={toGithub}>Github <FaGithubAlt style={{paddingLeft: '3px'}}/></Button>
+
           </div>
-          <div className={classes.btnsHolder}>
+          {/* <div className={classes.btnsHolder}>
             <Button variant="contained" onClick={toGithub}>Github <FaGithubAlt style={{paddingLeft: '3px'}}/></Button>
-            {/* <Button variant="outlined">Download CV</Button> */}
-          </div>
+            <Button variant="outlined">Download CV</Button>
+          </div> */}
 
           {/* <div className={classes.aboutMeText}>
               <p className={classes.bioText}>Hey, I'm <a href="/about" className="namelogoLink" style={{backgroundImage: "url(/img/bg11.jpg"}}>Daniel Idoko</a>. <br/> I'm a Website Developer & Ethical Hacking in Abuja Nigeria. Welcome to my website where I post blogs about topic that intrest me and share source code to my project. </p>
@@ -160,9 +164,15 @@ const SmallSidebar = ({ toggleMode }) => {
         </section>
 
         <div>
-          <p className={classes.bioText}><span style={{fontWeight: "bold"}}>Hey, I'm <a href="/about" className="namelogoLink" style={{backgroundImage: "url(/img/bg11.jpg"}}>Daniel Idoko</a>, a Web Developer & Ethical Hacker based in Abuja, Nigeria.</span></p>
+          {/* <p className={classes.bioText}><span style={{fontWeight: "bold"}}>Hey, I'm <a href="/about" className="namelogoLink" style={{backgroundImage: "url(/img/bg11.jpg"}}>Daniel Idoko</a>, a Web Developer & Ethical Hacker based in Abuja, Nigeria.</span></p>
         
-          <p className={classes.copyRight}>&copy; 2023 Daniel Idoko. All Rights Reserved.</p>
+          <p className={classes.copyRight}>&copy; 2023 Daniel Idoko. All Rights Reserved.</p> */}
+          <p className={classes.bioText}>
+              {/* Hello! I'm <a href="/about" className="namelogoLink" style={{backgroundImage: "url(/img/bg11.jpg)"}}>Daniel Idoko</a>,   */}
+              Hey there, I use this website to share code, blogs, and details about my projects.
+              <br/>  
+              To learn more about me and the services I render, please visit my main site: <a href={`https://${mainWebsiteURL}`} target="_blank" rel="noopener noreferrer" style={{color: "rgb(30, 175, 237)"}}>{mainWebsiteURL}</a>.
+          </p>
         </div>
         
         

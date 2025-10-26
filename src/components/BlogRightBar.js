@@ -21,6 +21,7 @@ export default function BlogRightBar({
   divideArrayIntoChunks, 
   setDividedArrays 
 }) {
+    const mainWebsiteURL = process.env.REACT_APP_MEETDANIELIDOKO_URL;
   const classes = useStyles({ DarkMode });
   const [topBlogs, setTopBlogs] = useState([]);
   const [uniqueCategories, setUniqueCategories] = useState([]);
@@ -313,7 +314,9 @@ export default function BlogRightBar({
         <section className={classes.section}>
           <h5 className={classes.title}>A little about me</h5>
           
-          <p className={classes.authorP}>Hey there 👋 I'm Daniel — a professional website developer and ethical hacker based in Abuja. Since 2021, I’ve been building and shipping code daily, helping small businesses launch fast, secure, and accessible web apps. I collaborate with devs on GitHub, write practical articles, and offer tailored security audits for companies, businesses, agencies etc. <a href="/about" className={classes.authorPLink}>see more</a></p>
+          <p className={classes.authorP}>I'm Daniel Idoko, a Website Developer and Ethical Hacker based in Abuja, Nigeria. I've been working in IT since 2021.
+
+          My expertise blends full-stack development with system and network administration, ensuring every solution is highly performant and resilient against modern security threats. <a href={`https://${mainWebsiteURL}`} target="_blank" className={classes.authorPLink}>see more</a></p>
         </section>
         {/* About section ENDS */}
         <div id="backToTop" className={classes.bttContainer}>

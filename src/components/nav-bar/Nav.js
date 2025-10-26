@@ -80,10 +80,10 @@ export default function Nav({ DarkMode }){
     return (
         <nav>
             <ul className={classes.ul}>
-                <li className={classes.li}><a id='sidenavlink' href="/" className={currentPath == "/" ? classes.aa : classes.style5}>Home</a></li>
-                <li className={classes.li}><a id='sidenavlink' href="/learn" className={currentPath == "/learn" ? classes.aa : classes.style5}>Blogs</a></li>
+                <li className={classes.li}><a id='sidenavlink' href="/" className={currentPath == "/" ? classes.aa : classes.style5}>Blogs</a></li>
                 <li className={classes.li}><a id='sidenavlink' href="/projects" className={currentPath == "/projects" ? classes.aa : classes.style5}>Projects</a></li>
-                <li className={classes.li}><a id='sidenavlink' href="/about" className={currentPath == "/about" ? classes.aa : classes.style5}>About Me</a></li>
+                <li className={classes.li}><a id='sidenavlink' href="/learn" className={currentPath == "/learn" ? classes.aa : classes.style5}>Dev Notes</a></li>
+                {/* <li className={classes.li}><a id='sidenavlink' href="/about" className={currentPath == "/about" ? classes.aa : classes.style5}>About Me</a></li> */}
                 <li className={classes.li}><a id='sidenavlink' href="/reach-out" className={currentPath == "/reach-out" ? classes.aa : classes.style5}>Reach Out</a></li>
             </ul>
         </nav>

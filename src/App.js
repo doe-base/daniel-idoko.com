@@ -20,6 +20,7 @@ import 'slick-carousel/slick/slick-theme.css';
 
 
 
+
 const theme = createTheme({
   breakpoints: {
     values: {
@@ -77,7 +78,7 @@ function App() {
             <Route path="/blog/:blog_id"element={<SingleBlog DarkMode={DarkMode} />} />
             <Route path="/learn" element={<BlogPage DarkMode={DarkMode} />}/>
             <Route path="/projects" element={<ProjectPage DarkMode={DarkMode} />}/>
-            <Route path="/about" element={<About DarkMode={DarkMode}/>} />
+            {/* <Route path="/about" element={<About DarkMode={DarkMode}/>} /> */}
             <Route path="/reach-out" element={<Contact DarkMode={DarkMode}/>} />
 
             <Route path="/project/memory-game" element={<MemoryGameOverview DarkMode={DarkMode}/>} />
