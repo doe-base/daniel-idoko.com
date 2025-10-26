@@ -143,8 +143,8 @@ const SmallSidebar = ({ toggleMode }) => {
           </button>
 
           <div className={classes.sidebarLinks}>
-            <a  href='/' className={classes.link} style={currentPath == "/" ? {color: 'rgb(30, 175, 237)'} : null}>Dev Notes</a>
-            <a href='/learn' className={classes.link} style={currentPath == "/learn" ? {color: 'rgb(30, 175, 237)'} : null}>Blogs</a>
+            <a  href='/' className={classes.link} style={currentPath == "/" ? {color: 'rgb(30, 175, 237)'} : null}>Blogs</a>
+            <a href='/learn' className={classes.link} style={currentPath == "/learn" ? {color: 'rgb(30, 175, 237)'} : null}>Dev Notes</a>
             <a href='/projects' className={classes.link} style={currentPath == "/projects" ? {color: 'rgb(30, 175, 237)'} : null}>Projects</a>
             {/* <a href='/about' className={classes.link} style={currentPath == "/about" ? {color: 'rgb(30, 175, 237)'} : null}>About me</a> */}
             <a href='/reach-out' className={classes.link} style={currentPath == "/reach-out" ? {color: 'rgb(30, 175, 237)'} : null}>Reach out</a>
