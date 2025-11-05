@@ -4,9 +4,10 @@ import { createTheme, ThemeProvider } from "@mui/material";
 import Layout from "./Layout";
 import Home from "./pages/Home";
 import SingleBlog from "./pages/SingleBlog";
+import SingleDevNote from "./pages/SingleDevNote"
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import BlogPage from './pages/Blog';
+import DevNotePage from './pages/DevNotes';
 import ProjectPage from "./pages/Projects";
 import MemoryGameOverview from "./pages/ProjectOverview_memory-game";
 import NetflixCloneOverview from "./pages/ProjectOverview_netflix-clone";
@@ -75,11 +76,13 @@ function App() {
         <Layout DarkMode={DarkMode} toggleMode={toggleMode}>
           <Routes>
             <Route path="/" element={<Home DarkMode={DarkMode}/>} />
-            <Route path="/blog/:blog_id"element={<SingleBlog DarkMode={DarkMode} />} />
-            <Route path="/learn" element={<BlogPage DarkMode={DarkMode} />}/>
+            <Route path="/learn" element={<DevNotePage DarkMode={DarkMode} />}/>
             <Route path="/projects" element={<ProjectPage DarkMode={DarkMode} />}/>
-            {/* <Route path="/about" element={<About DarkMode={DarkMode}/>} /> */}
             <Route path="/reach-out" element={<Contact DarkMode={DarkMode}/>} />
+            
+
+            <Route path="/blog/:blog_id"element={<SingleBlog DarkMode={DarkMode} />} />
+            <Route path="/dev-note/:devNote_id"element={<SingleDevNote DarkMode={DarkMode} />} />
 
             <Route path="/project/memory-game" element={<MemoryGameOverview DarkMode={DarkMode}/>} />
             <Route path="/project/netflix-clone" element={<NetflixCloneOverview DarkMode={DarkMode}/>} />

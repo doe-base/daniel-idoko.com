@@ -68,7 +68,7 @@ export default function BlogCard2({ item, DarkMode }){
     const classes = useStyles({ img, DarkMode });
     return(
         <Grid xs={12} md={5} xl={3} item className={classes.article}>
-            <a href={`/blog/${item._id}`}>
+            <a href={`/dev-note/${item._id}`}>
                 <div className={classes.img}></div>
                 <div>
                     <div className={classes.catDate}>{item.category} — {item.date}</div>

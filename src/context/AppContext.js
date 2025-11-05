@@ -1,5 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react';
-import BlogsData from "../data/blogs.json"
+import BlogsData from "../data/blogs.json";
+import DevNotesData from "../data/dev-notes.json"
 
 const AppContext = React.createContext();
 
@@ -8,6 +9,9 @@ const AppProvider = ({ children }) => {
     const [Blogsloading, setBlogsloading] = useState(false);
     const [ isNavOpen, setIsNavOpen ] = useState(false);
     const [ DarkMode, setDarkMode ] = useState(JSON.parse(localStorage.getItem('mode')));
+    const [DevNotes, setDevNotes] = useState(DevNotesData)
+    const [DevNotesloading, setDevNotesloading] = useState(false);
+
 
     useEffect(()=> {
         if(DarkMode === null){
@@ -28,7 +32,9 @@ const AppProvider = ({ children }) => {
                 setDarkMode,
                 isNavOpen,
                 setIsNavOpen,
-                Blogsloading
+                Blogsloading,
+                DevNotes,
+                DevNotesloading
             }}
         >
             { children }

@@ -12,27 +12,27 @@ function getTop4HighestViewBlog(data) {
   return top4HighestViews;
 }
 
-export default function BlogContainer({ DarkMode, }){
+export default function DevNotesContainer({ DarkMode, }){
 
     const classes = useStyles({DarkMode});
-    const { setIsNavOpen, Blogs, Blogsloading } = useGlobalContext();
-    const [topBlogs, setTopBlogs] = useState(Blogs);
+    const { setIsNavOpen, DevNotes, Blogsloading } = useGlobalContext();
+    const [topDevNotes, setTopDevNotes] = useState(DevNotes);
 
 
     const groupedBlogs = useMemo(() => {
-      return Blogs.reduce((acc, item) => {
+      return DevNotes.reduce((acc, item) => {
         const year = item.year; // Use the year from your data
         if (!acc[year]) acc[year] = [];
         acc[year].push(item);
         return acc;
       }, {});
-    }, [Blogs]);
+    }, [DevNotes]);
       
       useEffect(()=>{
         if(!Blogsloading){
-          setTopBlogs(getTop4HighestViewBlog(Blogs))
+          setTopDevNotes(getTop4HighestViewBlog(DevNotes))
         }
-      }, [Blogs]);
+      }, [DevNotes]);
 
       useEffect(()=>{
         const backToTopButton = document.getElementById("backToTop")
@@ -76,7 +76,7 @@ export default function BlogContainer({ DarkMode, }){
                                 <h3 className={classes.yearTitle}>{year}</h3>
                                 {
                                   groupedBlogs[year].map(item => (
-                                    <a href={`/blog/${item._id}`} key={item._id} id="blog-card" className={classes.blogCard}>
+                                    <a href={`/dev-note/${item._id}`} key={item._id} id="blog-card" className={classes.blogCard}>
                                         <p id="blog-text" className={classes.blogText} style={{display: 'block'}}>{item.title}</p>
                                         <time className={classes.dateText} style={{display: 'block'}}>{item.date.slice(0, -6)}</time>
                                     </a>
@@ -93,8 +93,8 @@ export default function BlogContainer({ DarkMode, }){
 
                             <Grid container>
                                 {
-                                  topBlogs &&
-                                  topBlogs.map(item => <BlogCard2 item={item} DarkMode={DarkMode}/>)
+                                  topDevNotes &&
+                                  topDevNotes.map(item => <BlogCard2 item={item} DarkMode={DarkMode}/>)
                                 }
                                 
                             </Grid>
