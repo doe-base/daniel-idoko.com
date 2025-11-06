@@ -1,15 +1,5 @@
 [
-    {
-    "_id": "66e78dcb1f42ce44d04c188f",
-    "articlelink": "",
-    "demolink": "https://bank-application-website.vercel.app",
-    "disc": "An interactive bank app with secure login and a modern interface, built using Next.js and Go.",
-    "name": "Bank Application",
-    "number": 3,
-    "sourcelink": "/project/bank-application",
-    "tech": "Go,Next js",
-    "year": "2024"
-  },
+
   {
     "_id": "64e08ea53eba4adba8feb49d",
     "articlelink": "",
