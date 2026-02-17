@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Button, Grid } from "@mui/material";
+import { Button, Grid, Box } from "@mui/material";
 import useStyles from "../styles/singleblog";
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import AccessAlarmIcon from '@mui/icons-material/AccessAlarm';
@@ -14,13 +14,16 @@ import hljs from 'highlight.js';
 import { Watch } from "react-loader-spinner";
 import GLightbox from 'glightbox';
 import 'glightbox/dist/css/glightbox.min.css';
+import ProjectImageSlider from '../components/image-slider/ResponsiveSlider';
+
 
 
 
 export default function SingleDevNoteContainer({ item, DarkMode }) {
 
     const classes = useStyles({ DarkMode });
-    const { body, title, date, category, readduration} = item;
+    const isDark = DarkMode;
+    const { body, title, date, category, readduration, projectimgs} = item;
     const { setIsNavOpen } = useGlobalContext();
     const [message, setMessage] = useState('')
     const [loading, setLoading] = useState(false)
@@ -223,7 +226,19 @@ export default function SingleDevNoteContainer({ item, DarkMode }) {
                       <div>
                         <h1 className={classes.Blogtitle}>{title}</h1>
                       </div>
+
+                      {/* Image Slider */}
+                      {projectimgs.length > 0 
+                        ?
+                        <Box sx={{ mb: 3 }}>
+                          <ProjectImageSlider images={projectimgs} darkMode={isDark} />
+                        </Box>
+                        :
+                        null
+                      }
                   </div>
+
+
 
                   <div dangerouslySetInnerHTML={{__html: body}}></div>
 

@@ -29,10 +29,9 @@ const ProjectImageSlider = ({ images, darkMode }) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     adaptiveHeight: true,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
+    nextArrow: images.length > 1 ? <NextArrow /> : undefined,
+    prevArrow: images.length > 1 ? <PrevArrow /> : undefined,
   };
-
   return (
     <div className={`slider-wrapper ${darkMode ? 'dark' : 'light'}`}>
       <Slider {...settings}>
