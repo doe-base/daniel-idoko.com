@@ -17,7 +17,7 @@ const AppProvider = ({ children }) => {
         if(DarkMode === null){
             setDarkMode(true);
         }
-    })
+    }, [DarkMode])
 
 
     useEffect(()=>{

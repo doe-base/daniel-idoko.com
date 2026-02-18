@@ -13,7 +13,7 @@ export default function SingleBlog({ DarkMode }) {
     if(!Blogsloading){
       setItem(Blogs.find(blog => blog._id === blog_id));
     }
-  }, [Blogs])
+  }, [Blogs, Blogsloading, blog_id])
   
 
   return (
