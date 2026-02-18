@@ -171,7 +171,6 @@ const useStyles = makeStyles((theme) => {
         },
         
         "&:hover": {
-          border: "1px solid #000",
           border: ({DarkMode})=>{
             if(DarkMode){
               return '1px solid #fff'

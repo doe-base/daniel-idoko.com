@@ -62,7 +62,6 @@ const useStyles = makeStyles((theme) => {
           fontWeight: "600",
           fontFamily: "Lora, Arial, serif",
           fontSize: "2.5rem",
-          marginBottom: "3rem",
 
           [theme.breakpoints.down('sm')]: {
             marginBottom: "0rem",

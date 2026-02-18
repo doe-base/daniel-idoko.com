@@ -88,7 +88,6 @@ const useStyles = makeStyles((theme) => {
         fontStyle: "italic",
         marginBottom: "1.5rem",
         lineHeight: "1.5",
-        color: "",
         color: ({ DarkMode })=>{
           if(DarkMode){
               return "#fff"
@@ -102,7 +101,6 @@ const useStyles = makeStyles((theme) => {
         fontWeight: "normal",
         marginBottom: "1.5rem",
         lineHeight: "1.5",
-        color: "",
         color: ({ DarkMode })=>{
           if(DarkMode){
               return "#fff"
