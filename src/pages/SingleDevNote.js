@@ -13,7 +13,7 @@ export default function SingleDevNote({ DarkMode }) {
     if(!DevNotesloading){
       setItem(DevNotes.find(devNote => devNote._id === devNote_id));
     }
-  }, [DevNotes, DevNotesloading, item])
+  }, [DevNotes, DevNotesloading, item, devNote_id])
   
 
   return (

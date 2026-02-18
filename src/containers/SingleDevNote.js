@@ -148,7 +148,7 @@ export default function SingleDevNoteContainer({ item, DarkMode }) {
 
     useEffect(() => {
         document.title = `${title}`;
-    }, [item, pageLoading]);
+    }, [item, pageLoading, title]);
 
     const handleCommentPost=(e)=>{
       e.preventDefault();
