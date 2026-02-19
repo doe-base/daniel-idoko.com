@@ -145,7 +145,7 @@ export default function SingleBlogContainer({ item, DarkMode }) {
 
     useEffect(() => {
         document.title = `${title}`;
-    }, [item, pageLoading]);
+    }, [item, pageLoading, title]);
 
     const handleCommentPost=(e)=>{
       e.preventDefault();
@@ -153,7 +153,7 @@ export default function SingleBlogContainer({ item, DarkMode }) {
       setMessage('')
       setLoading(true)
 
-      const formData = new FormData;
+      const formData = new FormData();
       formData.append('email', email);
       formData.append('comment', comment);
       

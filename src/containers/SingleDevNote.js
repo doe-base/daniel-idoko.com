@@ -153,10 +153,10 @@ export default function SingleDevNoteContainer({ item, DarkMode }) {
     const handleCommentPost=(e)=>{
       e.preventDefault();
 
-      setMessage('')
+      setMessage("")
       setLoading(true)
 
-      const formData = new FormData;
+      const formData = new FormData();
       formData.append('email', email);
       formData.append('comment', comment);
       
