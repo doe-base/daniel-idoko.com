@@ -1,12 +1,23 @@
 [
 
   {
+    "_id": "a7c39f12e84b4d6f9a21c8e57b03d4fa",
+    "articlelink": "",
+    "demolink": "",
+    "disc": "LAN Network Discovery & Communication Tool",
+    "name": "Net Reader",
+    "number": 1,
+    "sourcelink": "/dev-note/092384756122",
+    "tech": "Go,React",
+    "year": "2026"
+  },
+  {
     "_id": "64e08ea53eba4adba8feb49d",
     "articlelink": "",
     "demolink": "https://memory-game-v2-theta.vercel.app",
     "disc": "A fun javascript game",
     "name": "Memory Game",
-    "number": 1,
+    "number": 2,
     "sourcelink": "/project/memory-game",
     "tech": "Javascript",
     "year": "2022"
@@ -17,7 +28,7 @@
     "demolink": "https://netflix-clone-self-iota.vercel.app",
     "disc": "I build the good old netflix clone to flex my Firebase and \n\nReact skills. You might get a Phishing warning because of how good it is.",
     "name": "Netflix Clone",
-    "number": 2,
+    "number": 3,
     "sourcelink": "/project/netflix-clone",
     "tech": "Firebase,React",
     "year": "2022"
